@@ -6,6 +6,11 @@
 
 > Cache any route with redis
 
+## About this Fork
+When a key expires, it does not get removed from `group` keys. This causes a memory leak and causes the cashe to need periodic purging.
+
+The purpose of this fork is to eliminate the group key.
+
 ## Releases
 * Versions 1.x.x are compatible with Feathersjs 3.x.x
 * Versions 0.x.x are compatible with Feathersjs 2.x.x -> this branch will not be updated anymore
@@ -39,8 +44,6 @@ In the same fashion if you have many variants of the same endpoint that return s
 '/articles/article?markdown=true' // variant
 ```
 #### Clearing cache
-These are all listed in a redis list under `group-articles` and can be busted by calling `/cache/clear/group/article` or `/cache/clear/group/articles` it does not matter. All urls keys will be purged.
-
 You can also purge single cached paths as by doing GET requests on 
 ```js
 '/cache/clear/single/articles'
@@ -137,7 +140,7 @@ Available routes:
 // '/cache/index' // returns an array with all the keys
 '/cache/clear' // clears the whole cache
 '/cache/clear/single/:target' // clears a single route if you want to purge a route with params just adds them target?param=1
-'/cache/clear/group/:target' // clears a group
+'/cache/clear/group/:target' // clears a group (but there are no groups to clear), to be removed in a future version
 ```
 
 ## Complete Example
