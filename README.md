@@ -11,22 +11,14 @@ When a key expires, it does not get removed from `group` keys. This causes a mem
 
 The purpose of this fork is to eliminate the group key.
 
-## Releases
-* Versions 1.x.x are compatible with Feathersjs 3.x.x
-* Versions 0.x.x are compatible with Feathersjs 2.x.x -> this branch will not be updated anymore
+This library is only tested with Feathers 3.x.x
 
 ## Installation
 
 ### Feathers 3.x.x
 ```
-npm install feathers-hooks-rediscache --save
+npm install feathers-redis-cache-no-group --save
 ```
-
-### Feathers 2.x.x
-If you do not use nested routes you can install version 1.x.x if not:
-```
-  npm install feathers-hooks-rediscache@0.3.6 --save-exact
-```    
 
 ## Purpose
 The purpose of these hooks is to provide redis caching for APIs endpoints. Using redis is a very good option for clusturing your API. As soon as a request is cached it is available to all the other nodes in the cluster, which is not true for usual in memory cache as each node has its own memory allocated. This means that each node has to cache all requests individually.
