@@ -132,7 +132,7 @@ Available routes:
 
 ## Complete Example
 
-Here's an example of a Feathers server that uses `feathers-hooks-rediscache`.
+Here's an example of a Feathers server that uses `feathers-redis-cache-no-group`.
 
 ```js
 const feathers = require('feathers');
@@ -140,8 +140,8 @@ const rest = require('feathers-rest');
 const hooks = require('feathers-hooks');
 const bodyParser = require('body-parser');
 const errorHandler = require('feathers-errors/handler');
-const routes = require('feathers-hooks-rediscache').cacheRoutes;
-const redisClient = require('feathers-hooks-rediscache').redisClient;
+const routes = require('feathers-redis-cache-no-group').cacheRoutes;
+const redisClient = require('feathers-redis-cache-no-group').redisClient;
 
 // Initialize the application
 const app = feathers()
@@ -166,9 +166,9 @@ Add hooks on the routes that need caching
 ```js
 //services/<service>.hooks.js
 
-const redisBefore = require('feathers-hooks-rediscache').redisBeforeHook;
-const redisAfter = require('feathers-hooks-rediscache').redisAfterHook;
-const cache = require('feathers-hooks-rediscache').hookCache;
+const redisBefore = require('feathers-redis-cache-no-group').redisBeforeHook;
+const redisAfter = require('feathers-redis-cache-no-group').redisAfterHook;
+const cache = require('feathers-redis-cache-no-group').hookCache;
 
 
 module.exports = {

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import * as lib from '../src';
 
-describe('feathers-hooks-rediscache', () => {
+describe('feathers-redis-cache-no-group', () => {
   it('loads Redis Client', () => {
     expect(lib).to.respondTo('redisClient');
   });
