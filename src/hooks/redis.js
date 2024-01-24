@@ -77,9 +77,6 @@ export function after(options) { // eslint-disable-line no-unused-vars
 
         client.set(path, JSON.stringify(hook.result));
         client.expire(path, hook.result.cache.duration);
-        if (hook.path) {
-          client.rpush(hook.result.cache.group, path);
-        }
 
         /* istanbul ignore next */
         if (options.env !== 'test') {
