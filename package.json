@@ -1,8 +1,8 @@
 {
   "name": "feathers-redis-cache-no-group",
   "description": "Cache any route with redis",
-  "version": "1.0.1",
-  "homepage": "https://github.com/jjchee/feathers-hooks-rediscache",
+  "version": "1.0.2",
+  "homepage": "https://github.com/jjchee/feathers-redis-cache-no-group",
   "main": "lib/library.min.js",
   "nyc": {
     "require": [
@@ -24,7 +24,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jjchee/feathers-hooks-rediscache.git"
+    "url": "git://github.com/jjchee/feathers-redis-cache-no-group.git"
   },
   "author": {
     "name": "Jason Chee",
@@ -32,7 +32,7 @@
   },
   "contributors": [],
   "bugs": {
-    "url": "https://github.com/jjchee/feathers-hooks-rediscache/issues"
+    "url": "https://github.com/jjchee/feathers-redis-cache-no-group/issues"
   },
   "engines": {
     "node": ">= 6.0.0"

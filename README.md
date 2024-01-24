@@ -1,9 +1,4 @@
 # Redis Cache
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/idealley/feathers-hooks-rediscache.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/idealley/feathers-hooks-rediscache.png?branch=master)](https://travis-ci.org/idealley/feathers-hooks-rediscache)
-[![codecov](https://codecov.io/gh/idealley/feathers-hooks-rediscache/branch/master/graph/badge.svg)](https://codecov.io/gh/idealley/feathers-hooks-rediscache)
-
 > Cache any route with redis
 
 ## About this Fork
