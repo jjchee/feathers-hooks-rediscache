@@ -44,10 +44,6 @@ const config = {
       {
         test: /(\.jsx|\.js)$/,
         loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env'],
-          plugins: ['add-module-exports']
-        },
         exclude: /(node_modules|bower_components)/
       },
       {
